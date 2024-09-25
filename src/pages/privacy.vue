@@ -426,11 +426,13 @@ const appName = 'Rockster'
     color: #000;
     margin-left:6px;
     margin-right:6px;
-    background-color: fff;
+    /* background-color: fff; */
+    background-image: linear-gradient(#FFF5D8BE, #FFFEEFCD);
+
   }
   .bt {
     font-size: 20px;
     margin: 6px 0px;
-    color: #7f1146;
+    color: #FF9F462D;
   }
 </style>
