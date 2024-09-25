@@ -525,7 +525,7 @@ const appName = 'Rockster'
     color: #666666;
 
     /* background-color: #fff; */
-    background-image: linear-gradient(#FFF5D8BE, #FFFEEFCD);
+    background-image: linear-gradient(#F5D8BE, #FEEFCD);
   }
   .T_title {
     font-size: 18px;
@@ -541,7 +541,7 @@ const appName = 'Rockster'
   .title_content {
     font-size: 12px;
     margin-bottom: 12px;
-    color: #FF9F462D;
+    color: #9F462D;
     margin-left: 12px;
     margin-right:12px;
   }
