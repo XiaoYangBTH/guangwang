@@ -427,7 +427,7 @@ const appName = 'Rockster'
     margin-left:6px;
     margin-right:6px;
     /* background-color: fff; */
-    background-image: linear-gradient(#F5D8BE, #FEEFCD);
+    background-image: linear-gradient(#FFF5D8BE, #FFFEEFCD);
 
   }
   .bt {
