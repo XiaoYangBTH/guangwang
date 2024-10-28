@@ -424,13 +424,13 @@ const appName = 'Seyoo'
     font-size: 14px;
     margin-bottom: 14px;
     color: #6a6767;
-    margin-left:6px;
-    margin-right:6px;
+    margin-left:0px;
+    margin-right:0px;
     background-color: #000000;
   }
   .bt {
     font-size: 20px;
-    margin: 6px 0px;
+    margin: 0px 0px;
     color: #ffffff;
   }
 </style>
