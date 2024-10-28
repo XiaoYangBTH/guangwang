@@ -522,15 +522,15 @@ const appName = 'Seyoo'
     padding: 0px 25px;
     font-size: 14px;
     margin-bottom: 14px;
-    color: #666666;
+    color: #6a6767;
 
-    background-color: #fff;
+    background-color: #000000;
   }
   .T_title {
     font-size: 18px;
     font-weight: 600;
     margin: 1rem 0px;
-    color: #666666;
+    color: #ffffff;
   }
   .T_content {
     font-size: 14px;

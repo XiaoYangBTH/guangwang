@@ -423,14 +423,14 @@ const appName = 'Seyoo'
   .protocol {
     font-size: 14px;
     margin-bottom: 14px;
-    color: #000;
+    color: #6a6767;
     margin-left:6px;
     margin-right:6px;
-    background-color: fff;
+    background-color: #000000;
   }
   .bt {
     font-size: 20px;
     margin: 6px 0px;
-    color: #7f1146;
+    color: #ffffff;
   }
 </style>
