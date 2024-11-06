@@ -519,7 +519,7 @@ const appName = 'Paya'
 
 <style  scoped>
   .agreement {
-    padding: 0px 25px;
+    /* padding: 0px 25px; */
     font-size: 14px;
     margin-bottom: 14px;
     color: #6a6767;
@@ -534,7 +534,7 @@ const appName = 'Paya'
   }
   .T_content {
     font-size: 14px;
-    margin-bottom: px;
+    margin-bottom: 0px;
     /* color: #666; */
   }
   .title_content {
