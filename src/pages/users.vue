@@ -517,29 +517,33 @@ const appName = 'Nyco'
   </div>
 </template>
 
+
+
+
+
 <style  scoped>
   .agreement {
-    padding: 0px 25px;
+    /* padding: 0px 25px; */
     font-size: 14px;
     margin-bottom: 14px;
-    color: #666666;
+    color: #6a6767;
 
-    background-color: #fff;
+    background-color: #000000;
   }
   .T_title {
     font-size: 18px;
     font-weight: 600;
-    margin: 1rem 0px;
-    color: #666666;
+    margin: 0rem 0px;
+    color: #ffffff;
   }
   .T_content {
     font-size: 14px;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     /* color: #666; */
   }
   .title_content {
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     color: #666;
     margin-left: 12px;
     margin-right:12px;
