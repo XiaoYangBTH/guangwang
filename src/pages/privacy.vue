@@ -419,18 +419,19 @@ const appName = 'Seabio'
   </div>
 </template>
 
+
 <style scoped>
   .protocol {
     font-size: 14px;
     margin-bottom: 14px;
-    color: #000;
-    margin-left:6px;
-    margin-right:6px;
-    background-color: fff;
+    color: #6a6767;
+    margin-left:0px;
+    margin-right:0px;
+    background-color: #000000;
   }
   .bt {
     font-size: 20px;
-    margin: 6px 0px;
-    color: #7f1146;
+    margin: 0px 0px;
+    color: #ffffff;
   }
 </style>
