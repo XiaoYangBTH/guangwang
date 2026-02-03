@@ -1,17 +1,304 @@
-<script setup lang="ts" generic="T extends any, O extends any">
-defineOptions({
-  name: 'IndexPage',
-})
+<script setup>
+import { ref } from "vue";
+import CryptoJS from "crypto-js";
+import { ElMessage,ElMessageBox } from 'element-plus'
+
+const dialogVisible = ref(false)
+let ivvvi = ref("");
+const inputText = ref(""); // 明文或密文
+const secretKey = ref(""); // 密钥
+const outputText = ref(""); // 结果
+const encodeType = ref("Base64"); // 默认 Base64
+// AES 加密
+const encrypt = () => {
+  if (!inputText.value || !secretKey.value || !ivvvi.value) {
+    ElMessage({
+    message: '请输入文本和密钥和Iv',
+    type: 'warning',
+  })
+    return;
+  }
+  const key = CryptoJS.enc.Utf8.parse(secretKey.value.padEnd(16, "0")); // 确保密钥长度为 16
+  const iv = CryptoJS.enc.Utf8.parse(`${ivvvi.value}`); // 固定 IV，必须 16 字节
+  const encryptedRaw = CryptoJS.AES.encrypt(inputText.value, key, {
+    iv: iv,
+    mode: CryptoJS.mode.CBC,
+    padding: CryptoJS.pad.Pkcs7
+  });
+
+  const encrypted = encodeType.value === "Hex"
+    ? encryptedRaw.ciphertext.toString(CryptoJS.enc.Hex)
+    : encryptedRaw.toString(); // 默认 Base64
+
+  outputText.value = `[KRICNWQKIVstillGrove KRICNWQKIVduskMurmur:@"${encrypted}"]`;
+  tableValue.value.unshift({
+    textvalue: inputText.value,
+    secKey: secretKey.value,
+    ivkey: ivvvi.value,
+    result: encrypted
+  });
+
+};
+// AES 解密
+const decrypt = () => {
+  if (!inputText.value || !secretKey.value || !ivvvi.value) {
+    ElMessage({
+    message: '请输入加密文本和密钥和Iv',
+    type: 'warning',
+  })
+    return;
+  }
+  try {
+    const key = CryptoJS.enc.Utf8.parse(secretKey.value.padEnd(16, "0")); // 确保密钥长度为 16
+    const iv = CryptoJS.enc.Utf8.parse(ivvvi.value); // 固定 IV，必须 16 字节
+    const encryptedSource = encodeType.value === "Hex"
+      ? CryptoJS.enc.Hex.parse(inputText.value)
+      : inputText.value;
+
+    const encryptedBase64 = encodeType.value === "Hex"
+      ? CryptoJS.enc.Base64.stringify(encryptedSource)
+      : encryptedSource;
+
+    const bytes = CryptoJS.AES.decrypt(encryptedBase64, key, {
+      iv: iv,
+      mode: CryptoJS.mode.CBC,
+      padding: CryptoJS.pad.Pkcs7
+    });
+
+    outputText.value = bytes.toString(CryptoJS.enc.Utf8);
+
+    tableValue.value.unshift({
+    textvalue: inputText.value,
+    secKey: secretKey.value,
+    ivkey: ivvvi.value,
+    result: outputText.value
+  });
+  } catch (error) {
+    ElMessage({
+    message: '解密失败，请检查密钥是否正确',
+    type: 'warning',
+  })
+
+  }
+};
+
+const copy = async () => {
+  if (!outputText.value) {
+    ElMessage({
+    message: '没有可复制的内容',
+    type: 'warning',
+  })
+
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(outputText.value);
+
+        ElMessage({
+    message: '复制成功',
+    type: 'success',
+  })
+      } catch (err) {
+        ElMessage({
+    message: '复制失败',
+    type: 'error',
+  })
+      }
+}
+
+
+// 清空输入
+const clearFields = () => {
+  dialogVisible.value = true;
+
+};
+
+const confitm = () => {
+  inputText.value = "";
+  secretKey.value = "";
+  outputText.value = "";
+  ivvvi.value= '';
+  tableValue.value = [];
+  dialogVisible.value = false;
+}
+
+
+let tableValue = ref([
+
+]);
+
+const copyweuf = async (text) => {
+  if (!text) {
+    ElMessage({
+    message: '没有可复制的内容',
+    type: 'warning',
+  })
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(text);
+    ElMessage({
+    message: '复制成功',
+    type: 'success',
+  })
+  } catch (err) {
+    ElMessage({
+    message: '复制失败',
+    type: 'error',
+  })
+  }
+};
+
+const clearTable = () => {
+  tableValue.value = [];
+}
+
+const deleteTable =(tableitem) => {
+  tableValue.value.splice(tableitem, 1);
+}
 </script>
 
 <template>
-  <div relative min-h-100vh>
-    <img h-full w-full src="../assets/bg.webp" alt="">
+  <div class="container">
+    <h2>AES 加密/解密工具</h2>
+    <textarea class="textaaa" v-model="inputText" placeholder="请输入明文或密文" />
+    <input v-model="secretKey"  placeholder="请输入密钥" />
+    <input v-model="ivvvi" placeholder="iv密钥（16）" :minlength=16 />
+    <select v-model="encodeType" class="styled-select">
+      <option value="Base64">Base64</option>
+      <option value="Hex">Hex（十六进制）</option>
+    </select>
+    <input v-model="outputText" placeholder="加密/解密结果" readonly />
 
-    <div class="email" absolute bottom-10 w-full flex justify-center>
-      <div rd-2 bg-black p-2 p-x-5 text-8 color-white>
-      Zygoo6782@icloud.com
-      </div>
+    <div class="buttons">
+      <button @click="encrypt">加密</button>
+      <button @click="decrypt">解密</button>
+      <button @click="copy">复制</button>
+      <button @click="clearFields">清空</button>
     </div>
   </div>
+  <div style="display: flex; justify-content: center;">
+    <div style="width: 90%">
+      <button @click="clearTable">清空表格</button>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: center; width: 100%;">
+
+    <el-table :data="tableValue" stripe style="width: 90%" border show-overflow-tooltip>
+      <el-table-column prop="textvalue" label="明文/密文" style=" white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; "   class-name="ellipsis-column"/>
+      <el-table-column prop="secKey" label="密钥"   />
+      <el-table-column prop="ivkey" label="iv密钥" />
+      <el-table-column prop="result" label="加密/解密结果" style=" white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; "  class-name="ellipsis-column"/>
+
+      <el-table-column fixed="right" label="操作" width="120" >
+        <template #default="scope">
+          <el-button
+            link
+            type="primary"
+            size="small"
+            @click.prevent="copyweuf(scope.row.result)"
+          >
+            复制
+          </el-button>
+          <el-button
+            link
+            type="primary"
+            size="small"
+            @click.prevent="deleteTable(scope.$index)"
+          >
+            删除
+          </el-button>
+        </template>
+      </el-table-column>
+    </el-table>
+  </div>
+
+  <el-dialog
+    v-model="dialogVisible"
+    title="提示"
+    width="500"
+    :before-close="handleClose"
+  >
+    <span>是否清空？</span>
+    <template #footer>
+      <div class="dialog-footer">
+        <el-button @click="dialogVisible = false">取消</el-button>
+        <el-button type="primary" @click="confitm">
+          确认
+        </el-button>
+      </div>
+    </template>
+  </el-dialog>
 </template>
+
+<style scoped>
+.ellipsis-column {
+  white-space: nowrap; /* 禁止换行 */
+  overflow: hidden; /* 隐藏溢出部分 */
+  text-overflow: ellipsis; /* 显示省略号 */
+}
+.textaaa {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 50px;
+}
+.container {
+  width: 800px;
+  margin: 30px auto;
+  padding: 20px 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+input {
+  display: block;
+  width:100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 50px;
+
+}
+.buttons {
+  display: flex;
+  justify-content: start;
+}
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.styled-select {
+  width: 100%;
+  height: 50px;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  appearance: none;
+  background-color: white;
+  font-size: 16px;
+  color: #333;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%206%205-6z%22%20fill%3D%22%23333%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+}
+</style>
