@@ -1,22 +1,38 @@
-<script setup lang="ts" generic="T extends any, O extends any">
+<script setup lang="ts">
 defineOptions({
-  name: 'IndexPage',
+  name: 'PrivacyPolicyPage',
 })
+
 const appName = 'Neblo'
+const developerName = 'Neblo'
+const contactEmail = 'garcialukamona@gmail.com'
+const lastUpdated = 'June 4, 2026'
 </script>
 
 <template>
   <div class="protocol">
     <div class="bt" style="text-align: center">
-      {{ appName }}'s Privacy Policy
+      {{ appName }} Privacy Policy
     </div>
-    The use of {{ appName }} through mobile applications may involve collection and use
-    of your information. This Privacy Policy explains and informs you how your
-    information is collected, used and disclosed by {{ appName }} with respect to your
-    access and use of our services through our mobile applications. It is
-    important for you to understand this Privacy Policy and how you may protect
-    your information, so please read this Privacy Policy carefully.
-    <br>
+    <p>
+      This Privacy Policy applies to the mobile application <strong>{{ appName }}</strong>,
+      published on Google Play by <strong>{{ developerName }}</strong>. This is the
+      official privacy policy for {{ appName }}.
+    </p>
+    <p>
+      Developer / Entity: <strong>{{ developerName }}</strong><br>
+      Privacy Contact: <a :href="`mailto:${contactEmail}`">{{ contactEmail }}</a><br>
+      Last Updated: {{ lastUpdated }}
+    </p>
+    <p>
+      The use of {{ appName }} through mobile applications may involve collection
+      and use of your information. This Privacy Policy explains how your
+      information is collected, used and disclosed by {{ developerName }} with
+      respect to your access and use of {{ appName }} through our mobile
+      applications. It is important for you to understand this Privacy Policy and
+      how you may protect your information, so please read this Privacy Policy
+      carefully.
+    </p>
     <div class="bt">
       1. Application Scope of this Privacy Policy
     </div>
@@ -413,8 +429,9 @@ const appName = 'Neblo'
     <div class="bt">
       9. Contacting Us
     </div>
-    If you have any questions about our Privacy Policy or any privacy-related
-    matters, please contact us via email at 【{{ appName }}@{{ appName }}.site】.
+    If you have any questions about this Privacy Policy, our data practices, or
+    any privacy-related matters, please contact {{ developerName }} at
+    <a :href="`mailto:${contactEmail}`">{{ contactEmail }}</a>.
     <br><br>
   </div>
 </template>
@@ -426,7 +443,7 @@ const appName = 'Neblo'
     color: #000;
     margin-left:6px;
     margin-right:6px;
-    background-color: fff;
+    background-color: #fff;
   }
   .bt {
     font-size: 20px;
