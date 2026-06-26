@@ -1,14 +1,14 @@
 <template>
   <div class="pp-container">
     <header class="pp-header">
-      <h1>HeliCall Privacy Policy</h1>
+      <h1>Helico Privacy Policy</h1>
       <p class="pp-updated">Date of the latest edition: May 16, 2022</p>
     </header>
 
     <p class="pp-intro">
       This policy describes what information we process to ensure that
       Incosplay, Timegram and other products and features offered by
-      HeliCall Inc. ("Incosplay Products" or "Products"). For more
+      Helico Inc. ("Incosplay Products" or "Products"). For more
       tools and information, see the Incosplay Settings and Timegram
       Settings. The Privacy Policy defines the Incosplay User Information
       Protection Policy.
@@ -536,7 +536,7 @@
         Contact 
          email:
         <a href="mailto:support@incosplay.top?subject=Policy%20question"
-          >HeliCall098772@gmail.com</a
+          >Helico098772@gmail.com</a
         >
       </address>
     </section>
