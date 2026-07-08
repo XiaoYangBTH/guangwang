@@ -94,7 +94,7 @@
           relevant authorities, as required by applicable laws. Users can
           report potential violations via the in-app reporting function or
           by emailing
-          
+          <a href="mailto:Chowe098772@gmail.com">Chowe098772@gmail.com</a>.
         </p>
       </section>
 
@@ -166,12 +166,89 @@
           inclusive space for everyone.
         </p>
       </section>
+
+      <section class="csp-section">
+        <h2>10. Questions and Support</h2>
+        <p>
+          If you have questions about this policy, need account assistance,
+          or want to request support, please use the form below or contact us
+          directly at
+          <a href="mailto:Chowe098772@gmail.com">Chowe098772@gmail.com</a>.
+        </p>
+
+        <form class="csp-support-form" novalidate @submit.prevent="handleSubmit">
+          <div class="csp-form-grid">
+            <div class="csp-form-field">
+              <label for="support-name">Name</label>
+              <input
+                id="support-name"
+                v-model.trim="supportForm.name"
+                type="text"
+                maxlength="50"
+                placeholder="Enter your name"
+                @blur="validateField('name')"
+              />
+              <p v-if="formErrors.name" class="csp-form-error">{{ formErrors.name }}</p>
+            </div>
+
+            <div class="csp-form-field">
+              <label for="support-email">Email</label>
+              <input
+                id="support-email"
+                v-model.trim="supportForm.email"
+                type="email"
+                maxlength="100"
+                placeholder="Enter your email"
+                @blur="validateField('email')"
+              />
+              <p v-if="formErrors.email" class="csp-form-error">{{ formErrors.email }}</p>
+            </div>
+          </div>
+
+          <div class="csp-form-field">
+            <label for="support-topic">Support Topic</label>
+            <select
+              id="support-topic"
+              v-model="supportForm.topic"
+              @change="validateField('topic')"
+            >
+              <option disabled value="">Select a support topic</option>
+              <option value="policy-question">Policy Question</option>
+              <option value="account-support">Account Support</option>
+              <option value="report-content">Report Content</option>
+              <option value="other">Other</option>
+            </select>
+            <p v-if="formErrors.topic" class="csp-form-error">{{ formErrors.topic }}</p>
+          </div>
+
+          <div class="csp-form-field">
+            <label for="support-message">Message</label>
+            <textarea
+              id="support-message"
+              v-model.trim="supportForm.message"
+              rows="6"
+              maxlength="1000"
+              placeholder="Describe your question or support request"
+              @blur="validateField('message')"
+            ></textarea>
+            <div class="csp-form-meta">
+              <p v-if="formErrors.message" class="csp-form-error">{{ formErrors.message }}</p>
+              <span class="csp-form-count">{{ supportForm.message.length }}/1000</span>
+            </div>
+          </div>
+
+          <div class="csp-form-actions">
+            <button type="submit" class="csp-submit-button">Send Support Request</button>
+            <p v-if="submitMessage" class="csp-form-success">{{ submitMessage }}</p>
+          </div>
+        </form>
+      </section>
     </div>
 
     <!-- 固定悬浮联系信息条 -->
     <div class="csp-floating-bar">
       <span class="csp-floating-label">Contact:</span>
-      <a class="csp-floating-email" 
+      <a class="csp-floating-email" href="mailto:Chowe098772@gmail.com"
         >Chowe098772@gmail.com</a
       >
     </div>
@@ -180,7 +257,107 @@
 
 <script>
 export default {
-  name: 'HiLiveChildSafetyPolicy'
+  name: 'HiLiveChildSafetyPolicy',
+  data() {
+    return {
+      supportForm: {
+        name: '',
+        email: '',
+        topic: '',
+        message: ''
+      },
+      formErrors: {
+        name: '',
+        email: '',
+        topic: '',
+        message: ''
+      },
+      submitMessage: ''
+    }
+  },
+  methods: {
+    validateField(field) {
+      const value = this.supportForm[field]
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+      if (field === 'name') {
+        if (!value) {
+          this.formErrors.name = 'Please enter your name.'
+        } else if (value.length < 2) {
+          this.formErrors.name = 'Name must be at least 2 characters.'
+        } else {
+          this.formErrors.name = ''
+        }
+      }
+
+      if (field === 'email') {
+        if (!value) {
+          this.formErrors.email = 'Please enter your email address.'
+        } else if (!emailPattern.test(value)) {
+          this.formErrors.email = 'Please enter a valid email address.'
+        } else {
+          this.formErrors.email = ''
+        }
+      }
+
+      if (field === 'topic') {
+        this.formErrors.topic = value
+          ? ''
+          : 'Please select the type of support you need.'
+      }
+
+      if (field === 'message') {
+        if (!value) {
+          this.formErrors.message = 'Please describe your question or issue.'
+        } else if (value.length < 10) {
+          this.formErrors.message = 'Message must be at least 10 characters.'
+        } else {
+          this.formErrors.message = ''
+        }
+      }
+
+      return !this.formErrors[field]
+    },
+    validateForm() {
+      const fields = ['name', 'email', 'topic', 'message']
+      return fields.map((field) => this.validateField(field)).every(Boolean)
+    },
+    handleSubmit() {
+      this.submitMessage = ''
+
+      if (!this.validateForm()) {
+        return
+      }
+
+      const subject = encodeURIComponent(
+        `Chowe Support Request - ${this.formatTopic(this.supportForm.topic)}`
+      )
+      const body = encodeURIComponent(
+        [
+          `Name: ${this.supportForm.name}`,
+          `Email: ${this.supportForm.email}`,
+          `Topic: ${this.formatTopic(this.supportForm.topic)}`,
+          '',
+          'Message:',
+          this.supportForm.message
+        ].join('\n')
+      )
+
+      window.location.href = `mailto:Chowe098772@gmail.com?subject=${subject}&body=${body}`
+      this.submitMessage =
+        'Your email app has been opened. Please send the message to complete your support request.'
+    },
+    formatTopic(topic) {
+      const topicMap = {
+        'policy-question': 'Policy Question',
+        'account-support': 'Account Support',
+        'report-content': 'Report Content',
+        other: 'Other'
+      }
+
+      return topicMap[topic] || 'Support'
+    }
+  }
 }
 </script>
 
@@ -274,6 +451,108 @@ export default {
   text-decoration: underline;
 }
 
+.csp-support-form {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e4ea;
+  border-radius: 12px;
+  background: #fafbfc;
+}
+
+.csp-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.csp-form-field {
+  margin-bottom: 1rem;
+}
+
+.csp-form-field label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+  color: #1a1c20;
+}
+
+.csp-form-field input,
+.csp-form-field select,
+.csp-form-field textarea {
+  width: 100%;
+  border: 1px solid #cfd5df;
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  font: inherit;
+  color: #2b2d33;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.csp-form-field input:focus,
+.csp-form-field select:focus,
+.csp-form-field textarea:focus {
+  outline: none;
+  border-color: #d64545;
+  box-shadow: 0 0 0 3px rgba(214, 69, 69, 0.12);
+}
+
+.csp-form-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.csp-form-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 1.25rem;
+}
+
+.csp-form-count {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #6b6f76;
+}
+
+.csp-form-error {
+  margin: 0.4rem 0 0;
+  font-size: 0.88rem;
+  color: #d64545;
+}
+
+.csp-form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.csp-submit-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: #d64545;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.csp-submit-button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.csp-form-success {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #1f7a47;
+}
+
 /* 固定在页面底部的半透明悬浮条 */
 .csp-floating-bar {
   position: fixed;
@@ -312,6 +591,14 @@ export default {
   .csp-container {
     padding: 1.5rem 1rem 6.5rem;
     font-size: 15px;
+  }
+
+  .csp-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .csp-support-form {
+    padding: 1rem;
   }
 
   .csp-floating-bar {
