@@ -3,7 +3,7 @@
     <div class="csp-container">
       <header class="csp-header">
         <h1>Whooli Policy Agreement</h1>
-        <p class="csp-updated">Last updated: June 25, 2025</p>
+        <p class="csp-updated">Last updated: July 9, 2026</p>
       </header>
 
       <p class="csp-intro">

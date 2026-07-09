@@ -2,7 +2,7 @@
   <div class="pp-container">
     <header class="pp-header">
       <h1>Whooli Privacy Policy</h1>
-      <p class="pp-updated">Date of the latest edition: May 16, 2022</p>
+      <p class="pp-updated">Date of the latest edition: July 9, 2026</p>
     </header>
 
     <p class="pp-intro">
