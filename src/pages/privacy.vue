@@ -6,9 +6,11 @@ defineOptions({
 const appName = 'Neblo'
 const appListingName = 'Neblo: Cam Street, Snap Mates'
 const packageName = 'com.tncyeuhc.neblo'
-const developerName = 'Neblo'
-const legalEntityName = 'Neblo'
+const developerName = 'GNP GLOBAL TRANSPORTATION LLC'
+const legalEntityName = 'GNP GLOBAL TRANSPORTATION LLC'
 const contactEmail = 'garcialukamona@gmail.com'
+const developerPhone = '+447478016956'
+const developerAddress = '4 N Federal Hwy APT 223, Dania Beach, FL 33004-2879, United States'
 const privacyUrl = 'https://app.3mq5rfuh.link/privacy/'
 </script>
 
@@ -21,9 +23,11 @@ const privacyUrl = 'https://app.3mq5rfuh.link/privacy/'
       <p><strong>App covered:</strong> {{ appListingName }}</p>
       <p><strong>Short app name:</strong> {{ appName }}</p>
       <p><strong>Android package name:</strong> com.tncyeuhc.neblo</p>
-      <p><strong>Google Play developer name / publisher:</strong> Neblo</p>
-      <p><strong>Developer / operator:</strong> Neblo</p>
-      <p><strong>Legal entity responsible for this policy:</strong> Neblo</p>
+      <p><strong>Google Play developer name / publisher:</strong> {{ developerName }}</p>
+      <p><strong>Developer / operator:</strong> {{ developerName }}</p>
+      <p><strong>Legal entity responsible for this policy:</strong> {{ legalEntityName }}</p>
+      <p><strong>Developer address:</strong> {{ developerAddress }}</p>
+      <p><strong>Developer phone:</strong> {{ developerPhone }}</p>
       <p><strong>Official privacy policy URL:</strong> https://app.3mq5rfuh.link/privacy/</p>
       <p><strong>Developer contact email:</strong> garcialukamona@gmail.com</p>
       <p><strong>Privacy request email:</strong> garcialukamona@gmail.com</p>
@@ -219,6 +223,8 @@ const privacyUrl = 'https://app.3mq5rfuh.link/privacy/'
     </p>
     <p><strong>Developer contact email:</strong> {{ contactEmail }}</p>
     <p><strong>Privacy request email:</strong> {{ contactEmail }}</p>
+    <p><strong>Developer phone:</strong> {{ developerPhone }}</p>
+    <p><strong>Developer address:</strong> {{ developerAddress }}</p>
   </main>
 </template>
 
