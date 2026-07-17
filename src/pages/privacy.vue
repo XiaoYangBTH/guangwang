@@ -4,26 +4,32 @@ defineOptions({
 })
 
 const appName = 'Neblo'
-const developerName = 'Neblo'
+const packageName = 'com.tncyeuhc.neblo'
 const contactEmail = 'garcialukamona@gmail.com'
-const effectiveDate = 'June 4, 2026'
 </script>
 
 <template>
   <main class="privacy-page">
-    <h1>{{ appName }} Privacy Policy</h1>
+    <h1>Neblo Privacy Policy</h1>
 
     <section class="policy-meta" aria-label="Policy summary">
-      <p><strong>App covered:</strong> {{ appName }}</p>
-      <p><strong>Developer / operator:</strong> {{ developerName }}</p>
-      <p><strong>Privacy contact:</strong> {{ contactEmail }}</p>
-      <p><strong>Effective date:</strong> {{ effectiveDate }}</p>
+      <p><strong>Google Play app name:</strong> Neblo</p>
+      <p><strong>App covered:</strong> Neblo</p>
+      <p><strong>Android package name:</strong> com.tncyeuhc.neblo</p>
+      <p><strong>Developer / operator:</strong> Neblo</p>
+      <p><strong>Legal entity responsible for this policy:</strong> Neblo</p>
+      <p><strong>Official privacy policy URL:</strong> https://app.3mq5rfuh.link/privacy</p>
+      <p><strong>Privacy contact:</strong> garcialukamona@gmail.com</p>
+      <p><strong>Effective date:</strong> July 17, 2026</p>
     </section>
 
     <p>
-      This Privacy Policy applies to the {{ appName }} mobile application
-      published on Google Play. It explains how {{ appName }} accesses,
-      collects, uses, shares, protects, retains, and deletes user data.
+      This Privacy Policy applies specifically to the Neblo mobile application
+      listed on Google Play as Neblo with Android package name
+      com.tncyeuhc.neblo. Neblo is published, operated, and legally controlled
+      by Neblo. This policy explains how Neblo accesses, collects, uses,
+      shares, protects, retains, and
+      deletes user data.
     </p>
 
     <h2>1. Information We Collect</h2>
@@ -182,8 +188,9 @@ const effectiveDate = 'June 4, 2026'
 
     <h2>11. Contact Us</h2>
     <p>
-      If you have questions, requests, or complaints about this Privacy Policy
-      or our handling of user data, please contact us:
+      If you have questions, requests, or complaints about this Privacy Policy,
+      the {{ appName }} app listed on Google Play under package name
+      {{ packageName }}, or our handling of user data, please contact us:
     </p>
     <p><strong>Email:</strong> {{ contactEmail }}</p>
   </main>
