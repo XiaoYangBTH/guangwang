@@ -4,32 +4,42 @@ defineOptions({
 })
 
 const appName = 'Neblo'
+const appListingName = 'Neblo: Cam Street, Snap Mates'
 const packageName = 'com.tncyeuhc.neblo'
+const developerName = 'Neblo'
+const legalEntityName = 'Neblo'
 const contactEmail = 'garcialukamona@gmail.com'
+const privacyUrl = 'https://app.3mq5rfuh.link/privacy/'
 </script>
 
 <template>
   <main class="privacy-page">
-    <h1>Neblo Privacy Policy</h1>
+    <h1>Neblo: Cam Street, Snap Mates Privacy Policy</h1>
 
     <section class="policy-meta" aria-label="Policy summary">
-      <p><strong>Google Play app name:</strong> Neblo</p>
-      <p><strong>App covered:</strong> Neblo</p>
+      <p><strong>Google Play app name:</strong> {{ appListingName }}</p>
+      <p><strong>App covered:</strong> {{ appListingName }}</p>
+      <p><strong>Short app name:</strong> {{ appName }}</p>
       <p><strong>Android package name:</strong> com.tncyeuhc.neblo</p>
+      <p><strong>Google Play developer name / publisher:</strong> Neblo</p>
       <p><strong>Developer / operator:</strong> Neblo</p>
       <p><strong>Legal entity responsible for this policy:</strong> Neblo</p>
-      <p><strong>Official privacy policy URL:</strong> https://app.3mq5rfuh.link/privacy</p>
-      <p><strong>Privacy contact:</strong> garcialukamona@gmail.com</p>
+      <p><strong>Official privacy policy URL:</strong> https://app.3mq5rfuh.link/privacy/</p>
+      <p><strong>Developer contact email:</strong> garcialukamona@gmail.com</p>
+      <p><strong>Privacy request email:</strong> garcialukamona@gmail.com</p>
       <p><strong>Effective date:</strong> July 17, 2026</p>
     </section>
 
     <p>
-      This Privacy Policy applies specifically to the Neblo mobile application
-      listed on Google Play as Neblo with Android package name
-      com.tncyeuhc.neblo. Neblo is published, operated, and legally controlled
-      by Neblo. This policy explains how Neblo accesses, collects, uses,
-      shares, protects, retains, and
-      deletes user data.
+      This Privacy Policy applies only to the {{ appListingName }} mobile
+      application published on Google Play under the app name
+      {{ appListingName }} and Android package name {{ packageName }}. The
+      Google Play developer name, publisher, operator, and legal entity
+      responsible for {{ appListingName }} is {{ developerName }} /
+      {{ legalEntityName }}. The official privacy policy URL for the Google
+      Play listing is {{ privacyUrl }}. This policy explains how {{ appName }}
+      accesses, collects, uses, shares, protects, retains, and deletes user
+      data.
     </p>
 
     <h2>1. Information We Collect</h2>
@@ -49,9 +59,22 @@ const contactEmail = 'garcialukamona@gmail.com'
         share through the app.
       </li>
       <li>
+        <strong>Location and map information:</strong> shooting destination
+        searches, saved street photography locations, map interactions, and
+        approximate or precise location information if you grant location
+        permission or choose to provide location-based content.
+      </li>
+      <li>
         <strong>Camera and microphone data:</strong> if you grant permission,
         the app may access your camera and microphone to support profile photos,
-        voice messages, video calls, and similar user-facing features.
+        photo publishing, media capture, and similar user-facing photography
+        features.
+      </li>
+      <li>
+        <strong>AI suggestion information:</strong> photos, preferences,
+        location choices, clothing style selections, posing interests, and
+        related inputs you provide when using Snapsense AI or other suggestion
+        features.
       </li>
       <li>
         <strong>Purchase and transaction information:</strong> product IDs,
@@ -76,7 +99,7 @@ const contactEmail = 'garcialukamona@gmail.com'
     <p>We use the information we collect to:</p>
     <ul>
       <li>create, verify, and manage user accounts;</li>
-      <li>provide app features such as profiles, messages, media sharing, and video or voice features;</li>
+      <li>provide app features such as profiles, messages, photo publishing, community interactions, Street Photography Map, and Snapsense AI suggestions;</li>
       <li>process purchases and provide paid services through Google Play Billing;</li>
       <li>maintain app safety, prevent fraud, abuse, spam, and unauthorized activity;</li>
       <li>respond to user support requests and privacy inquiries;</li>
@@ -93,14 +116,15 @@ const contactEmail = 'garcialukamona@gmail.com'
     <ul>
       <li>
         <strong>With other users:</strong> information and content you choose to
-        share, such as your profile, messages, photos, videos, or other user
-        content, may be visible to the users you interact with.
+        share, such as your profile, messages, photos, comments, shooting
+        locations, or other user content, may be visible to the users you
+        interact with.
       </li>
       <li>
         <strong>With service providers:</strong> we may use trusted providers
-        for hosting, analytics, crash reporting, customer support, security,
-        and payment processing. These providers may process data only as needed
-        to provide their services to us.
+        for hosting, map features, AI suggestions, analytics, crash reporting,
+        customer support, security, and payment processing. These providers may
+        process data only as needed to provide their services to us.
       </li>
       <li>
         <strong>With Google Play services:</strong> purchases and Android app
@@ -149,9 +173,9 @@ const contactEmail = 'garcialukamona@gmail.com'
     <p>
       You may request access, correction, or deletion of your personal
       information by contacting us at {{ contactEmail }}. If your app account
-      is deleted, we will delete or anonymize personal information associated
-      with that account unless we must retain certain information for legal,
-      safety, fraud-prevention, or accounting reasons.
+      is deleted, we will delete or anonymize personal
+      information associated with that account unless we must retain certain
+      information for legal, safety, fraud-prevention, or accounting reasons.
     </p>
 
     <h2>7. Your Choices and Permissions</h2>
@@ -189,10 +213,12 @@ const contactEmail = 'garcialukamona@gmail.com'
     <h2>11. Contact Us</h2>
     <p>
       If you have questions, requests, or complaints about this Privacy Policy,
-      the {{ appName }} app listed on Google Play under package name
-      {{ packageName }}, or our handling of user data, please contact us:
+      the {{ appListingName }} app listed on Google Play by {{ developerName }}
+      under package name {{ packageName }}, or our handling of user data, please
+      contact us:
     </p>
-    <p><strong>Email:</strong> {{ contactEmail }}</p>
+    <p><strong>Developer contact email:</strong> {{ contactEmail }}</p>
+    <p><strong>Privacy request email:</strong> {{ contactEmail }}</p>
   </main>
 </template>
 
