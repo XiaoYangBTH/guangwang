@@ -3,7 +3,7 @@
     <div class="csp-container">
       <header class="csp-header">
         <h1>Kiara Policy Agreement</h1>
-        <p class="csp-updated">Last updated: July 14, 2026</p>
+        <p class="csp-updated">Last updated: July 22, 2026</p>
       </header>
 
       <p class="csp-intro">

@@ -2,7 +2,7 @@
   <div class="pp-container">
     <header class="pp-header">
       <h1>Kiara Privacy Policy</h1>
-      <p class="pp-updated">Date of the latest edition: July 14, 2026</p>
+      <p class="pp-updated">Date of the latest edition: July 22, 2026</p>
     </header>
 
     <p class="pp-intro">
