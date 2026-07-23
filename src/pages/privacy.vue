@@ -1,14 +1,14 @@
 <template>
   <div class="pp-container">
     <header class="pp-header">
-      <h1>Kiara Privacy Policy</h1>
-      <p class="pp-updated">Date of the latest edition: July 22, 2026</p>
+      <h1>HeyKo Privacy Policy</h1>
+      <p class="pp-updated">Date of the latest edition: July 27, 2026</p>
     </header>
 
     <p class="pp-intro">
       This policy describes what information we process to ensure that
       Incosplay, Timegram and other products and features offered by
-      Kiara Inc. ("Incosplay Products" or "Products"). For more
+      HeyKo Inc. ("Incosplay Products" or "Products"). For more
       tools and information, see the Incosplay Settings and Timegram
       Settings. The Privacy Policy defines the Incosplay User Information
       Protection Policy.
@@ -536,7 +536,7 @@
         Contact 
          email:
         <a href="mailto:support@incosplay.top?subject=Policy%20question"
-          >Kiara098772@gmail.com</a
+          >HeyKo098772@gmail.com</a
         >
       </address>
     </section>
