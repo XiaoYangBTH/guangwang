@@ -3,8 +3,8 @@ defineOptions({
   name: 'PrivacyPage',
 })
 
-const appName = 'Neblo'
-const developerName = 'Neblo'
+const appName = 'Nosie'
+const developerName = 'Nosie'
 const contactEmail = 'garcialukamona@gmail.com'
 const effectiveDate = 'June 4, 2026'
 </script>
