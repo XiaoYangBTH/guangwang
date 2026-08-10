@@ -3,7 +3,7 @@
     <div class="csp-container">
       <header class="csp-header">
         <h1>MonkPop Policy Agreement</h1>
-        <p class="csp-updated">Last updated: July 27, 2026</p>
+        <p class="csp-updated">Last updated: August 12, 2026</p>
       </header>
 
       <p class="csp-intro">
