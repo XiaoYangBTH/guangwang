@@ -1,14 +1,14 @@
 <template>
   <div class="pp-container">
     <header class="pp-header">
-      <h1>Hottix Privacy Policy</h1>
+      <h1>Nuomet Privacy Policy</h1>
       <p class="pp-updated">Date of the latest edition: August 19, 2026</p>
     </header>
 
     <p class="pp-intro">
       This policy describes what information we process to ensure that
       Incosplay, Timegram and other products and features offered by
-      Hottix Inc. ("Incosplay Products" or "Products"). For more
+      Nuomet Inc. ("Incosplay Products" or "Products"). For more
       tools and information, see the Incosplay Settings and Timegram
       Settings. The Privacy Policy defines the Incosplay User Information
       Protection Policy.
@@ -536,7 +536,7 @@
         Contact 
          email:
         <a href="mailto:support@incosplay.top?subject=Policy%20question"
-          >Hottix098772@gmail.com</a
+          >Nuomet098772@gmail.com</a
         >
       </address>
     </section>
