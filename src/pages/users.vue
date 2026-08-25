@@ -2,16 +2,16 @@
   <div class="csp-wrapper">
     <div class="csp-container">
       <header class="csp-header">
-        <h1>MonkPop Policy Agreement</h1>
+        <h1>UoPop Policy Agreement</h1>
         <p class="csp-updated">Last updated: August 12, 2026</p>
       </header>
 
       <p class="csp-intro">
-        MonkPop adheres to a zero-tolerance policy for any form of child
+        UoPop adheres to a zero-tolerance policy for any form of child
         abuse, exploitation, and/or sexual behavior. We are committed to
         protecting the safety of underage users and ensuring that the
         platform is not used for inappropriate behavior. Any users who
-        violate the MonkPop Policy will have their accounts
+        violate the UoPop Policy will have their accounts
         deleted and may face legal consequences.
       </p>
 
@@ -19,7 +19,7 @@
       <section class="csp-section">
         <h2>1. Age Restriction</h2>
         <ul>
-          <li>Users must be at least 18 years old to use MonkPop.</li>
+          <li>Users must be at least 18 years old to use UoPop.</li>
           <li>
             Falsifying one's age to access the platform is strictly
             prohibited and will result in the suspension or deletion of the
@@ -32,7 +32,7 @@
       <section class="csp-section">
         <h2>2. Prohibited Activities</h2>
         <p>
-          MonkPop uses both automated and manual systems to detect underage
+          UoPop uses both automated and manual systems to detect underage
           activity and Child Sexual Abuse and Exploitation (CSAE). Any
           attempt to circumvent these systems is strictly prohibited.
           Prohibited activities include, but are not limited to, the
@@ -104,7 +104,7 @@
         <p>
           Users who have been convicted of child-related crimes (including
           but not limited to sexual assault, physical abuse, neglect, or
-          trafficking) are strictly prohibited from using MonkPop.
+          trafficking) are strictly prohibited from using UoPop.
         </p>
       </section>
 
@@ -112,9 +112,9 @@
       <section class="csp-section">
         <h2>6. Enforcement and Transparency</h2>
         <p>
-          MonkPop will strictly enforce the Child Safety Policy, and any
+          UoPop will strictly enforce the Child Safety Policy, and any
           violations will result in immediate penalties. Depending on the
-          severity of the violation, MonkPop may cooperate with law
+          severity of the violation, UoPop may cooperate with law
           enforcement agencies to conduct investigations.
         </p>
       </section>
@@ -122,7 +122,7 @@
       <!-- 7. User Education -->
       <section class="csp-section">
         <h2>7. User Education</h2>
-        <p>MonkPop educates users about child safety through the following methods:</p>
+        <p>UoPop educates users about child safety through the following methods:</p>
         <ul>
           <li>Providing the platform's child safety policy.</li>
           <li>
@@ -136,7 +136,7 @@
       <section class="csp-section">
         <h2>8. Additional Resources</h2>
         <p>
-          If you encounter child exploitation or abuse outside of MonkPop, we
+          If you encounter child exploitation or abuse outside of UoPop, we
           recommend contacting the following resources based on your
           location:
         </p>
@@ -160,7 +160,7 @@
       <section class="csp-section">
         <h2>9. Commitment to Child Safety</h2>
         <p>
-          MonkPop is committed to continuously evaluating and improving its
+          UoPop is committed to continuously evaluating and improving its
           policies, systems, and practices to ensure the highest standards
           of child safety on the platform. Our goal is to provide a safe and
           inclusive space for everyone.
@@ -172,7 +172,7 @@
     <div class="csp-floating-bar">
       <span class="csp-floating-label">Contact:</span>
       <a class="csp-floating-email" 
-        >MonkPop098772@gmail.com</a
+        >UoPop098772@gmail.com</a
       >
     </div>
   </div>
