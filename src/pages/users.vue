@@ -2,16 +2,16 @@
   <div class="csp-wrapper">
     <div class="csp-container">
       <header class="csp-header">
-        <h1>Nuomet Policy Agreement</h1>
+        <h1>1STIN! Policy Agreement</h1>
         <p class="csp-updated">Last updated: August 19, 2026</p>
       </header>
 
       <p class="csp-intro">
-        Nuomet adheres to a zero-tolerance policy for any form of child
+        1STIN! adheres to a zero-tolerance policy for any form of child
         abuse, exploitation, and/or sexual behavior. We are committed to
         protecting the safety of underage users and ensuring that the
         platform is not used for inappropriate behavior. Any users who
-        violate the Nuomet Policy will have their accounts
+        violate the 1STIN! Policy will have their accounts
         deleted and may face legal consequences.
       </p>
 
@@ -19,7 +19,7 @@
       <section class="csp-section">
         <h2>1. Age Restriction</h2>
         <ul>
-          <li>Users must be at least 18 years old to use Nuomet.</li>
+          <li>Users must be at least 18 years old to use 1STIN!.</li>
           <li>
             Falsifying one's age to access the platform is strictly
             prohibited and will result in the suspension or deletion of the
@@ -32,7 +32,7 @@
       <section class="csp-section">
         <h2>2. Prohibited Activities</h2>
         <p>
-          Nuomet uses both automated and manual systems to detect underage
+          1STIN! uses both automated and manual systems to detect underage
           activity and Child Sexual Abuse and Exploitation (CSAE). Any
           attempt to circumvent these systems is strictly prohibited.
           Prohibited activities include, but are not limited to, the
@@ -104,7 +104,7 @@
         <p>
           Users who have been convicted of child-related crimes (including
           but not limited to sexual assault, physical abuse, neglect, or
-          trafficking) are strictly prohibited from using Nuomet.
+          trafficking) are strictly prohibited from using 1STIN!.
         </p>
       </section>
 
@@ -112,9 +112,9 @@
       <section class="csp-section">
         <h2>6. Enforcement and Transparency</h2>
         <p>
-          Nuomet will strictly enforce the Child Safety Policy, and any
+          1STIN! will strictly enforce the Child Safety Policy, and any
           violations will result in immediate penalties. Depending on the
-          severity of the violation, Nuomet may cooperate with law
+          severity of the violation, 1STIN! may cooperate with law
           enforcement agencies to conduct investigations.
         </p>
       </section>
@@ -122,7 +122,7 @@
       <!-- 7. User Education -->
       <section class="csp-section">
         <h2>7. User Education</h2>
-        <p>Nuomet educates users about child safety through the following methods:</p>
+        <p>1STIN! educates users about child safety through the following methods:</p>
         <ul>
           <li>Providing the platform's child safety policy.</li>
           <li>
@@ -136,7 +136,7 @@
       <section class="csp-section">
         <h2>8. Additional Resources</h2>
         <p>
-          If you encounter child exploitation or abuse outside of Nuomet, we
+          If you encounter child exploitation or abuse outside of 1STIN!, we
           recommend contacting the following resources based on your
           location:
         </p>
@@ -160,7 +160,7 @@
       <section class="csp-section">
         <h2>9. Commitment to Child Safety</h2>
         <p>
-          Nuomet is committed to continuously evaluating and improving its
+          1STIN! is committed to continuously evaluating and improving its
           policies, systems, and practices to ensure the highest standards
           of child safety on the platform. Our goal is to provide a safe and
           inclusive space for everyone.
@@ -172,7 +172,7 @@
     <div class="csp-floating-bar">
       <span class="csp-floating-label">Contact:</span>
       <a class="csp-floating-email" 
-        >Nuomet098772@gmail.com</a
+        >1STIN!098772@gmail.com</a
       >
     </div>
   </div>
